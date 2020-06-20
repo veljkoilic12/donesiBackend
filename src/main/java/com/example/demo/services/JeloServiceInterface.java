@@ -7,7 +7,7 @@ import com.example.demo.jpa.Jelo;
 public interface JeloServiceInterface {
 	public Collection<Jelo> getJela();
 	public Jelo getJelo(int id);
-	public boolean addJelo(Jelo jelo);
-	public boolean modifyJelo(Jelo jelo);
-	public boolean deleteJelo(Jelo jelo);
+	public boolean addJelo(String token,Jelo jelo);
+	public boolean modifyJelo(String token,Jelo jelo);
+	public boolean deleteJelo(String token,Jelo jelo);
 }

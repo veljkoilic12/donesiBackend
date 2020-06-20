@@ -19,12 +19,12 @@ public class UserControler {
 	
 	@GetMapping("/user")
 	public Collection<User> getUsers(@RequestHeader("Authorization") String token){
-		return userService.getUsers();
+		return userService.getUsers(token);
 	}
 	
 	@GetMapping("/user/{id}")
 	public User getUser(@RequestHeader("Authorization") String token,@PathVariable int id) {
-		return userService.getUser(id);
+		return userService.getUser(token,id);
 	}
 	
 	@PostMapping("/user")
@@ -35,13 +35,13 @@ public class UserControler {
 	
 	@PutMapping("/user")
 	public ResponseEntity<User> modifyUser(@RequestHeader("Authorization") String token,@RequestBody User user){
-		userService.modifyUser(user);
+		userService.modifyUser(token,user);
 		return new ResponseEntity<User>(HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/user")
 	public ResponseEntity<User> deleteUser(@RequestHeader("Authorization") String token,@RequestBody User user){
-		userService.deleteUser(user);
+		userService.deleteUser(token,user);
 		return new ResponseEntity<User>(HttpStatus.OK);
 	}
 }

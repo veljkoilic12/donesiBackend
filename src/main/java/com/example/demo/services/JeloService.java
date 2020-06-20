@@ -22,19 +22,19 @@ public class JeloService implements JeloServiceInterface{
 	}
 
 	@Override
-	public boolean addJelo(Jelo jelo) {
+	public boolean addJelo(String token,Jelo jelo) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean modifyJelo(Jelo jelo) {
+	public boolean modifyJelo(String token,Jelo jelo) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean deleteJelo(Jelo jelo) {
+	public boolean deleteJelo(String token,Jelo jelo) {
 		// TODO Auto-generated method stub
 		return false;
 	}

@@ -15,12 +15,12 @@ public class UserService implements UserServiceInterface {
 	private UserRepository userRepo;
 
 	@Override
-	public Collection<User> getUsers() {
+	public Collection<User> getUsers(String token) {
 		return userRepo.findAll();
 	}
 
 	@Override
-	public User getUser(int id) {
+	public User getUser(String token,int id) {
 		return userRepo.getOne(id);
 	}
 
@@ -31,13 +31,13 @@ public class UserService implements UserServiceInterface {
 	}
 
 	@Override
-	public boolean modifyUser(User user) {
+	public boolean modifyUser(String token,User user) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean deleteUser(User user) {
+	public boolean deleteUser(String token,User user) {
 		// TODO Auto-generated method stub
 		return false;
 	}

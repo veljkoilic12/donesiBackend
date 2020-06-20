@@ -22,19 +22,19 @@ public class RestoranService implements RestoranServiceInterface {
 	}
 
 	@Override
-	public boolean addRestoran(Restoran resroan) {
+	public boolean addRestoran(String token,Restoran resroan) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean modifyRestoran(Restoran restoran) {
+	public boolean modifyRestoran(String token,Restoran restoran) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean deleteRestoran(Restoran restoran) {
+	public boolean deleteRestoran(String token,Restoran restoran) {
 		// TODO Auto-generated method stub
 		return false;
 	}

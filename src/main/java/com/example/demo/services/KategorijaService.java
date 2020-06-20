@@ -22,19 +22,19 @@ public class KategorijaService implements KategorijaServiceInterface{
 	}
 
 	@Override
-	public boolean addKategorija(Kategorija kategorija) {
+	public boolean addKategorija(String token,Kategorija kategorija) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean modifyKategorija(Kategorija kategorija) {
+	public boolean modifyKategorija(String token,Kategorija kategorija) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean deleteKategorija(Kategorija kategorija) {
+	public boolean deleteKategorija(String token,Kategorija kategorija) {
 		// TODO Auto-generated method stub
 		return false;
 	}

@@ -28,13 +28,13 @@ public class NarudzbaService implements NarudzbaServiceInterface{
 	}
 
 	@Override
-	public boolean modifyNarduzba(Narudzba narudzba) {
+	public boolean modifyNarduzba(String token,Narudzba narudzba) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean deleteNarudzba(Narudzba narudzba) {
+	public boolean deleteNarudzba(String token,Narudzba narudzba) {
 		// TODO Auto-generated method stub
 		return false;
 	}
