@@ -9,33 +9,33 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name="\"narudzba\"")
+@Table(name="narudzba")
 @NamedQuery(name="Narudzba.findAll", query="SELECT n FROM Narudzba n")
 public class Narudzba implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="\"id\"")
+	@Column(name="id")
 	private int id;
 
-	@Column(name="\"adresa\"")
+	@Column(name="adresa")
 	private String adresa;
 
-	@Column(name="\"email\"")
+	@Column(name="email")
 	private String email;
 
-	@Column(name="\"ime\"")
+	@Column(name="ime")
 	private String ime;
 
-	@Column(name="\"napomena\"")
+	@Column(name="napomena")
 	private String napomena;
 
-	@Column(name="\"tel\"")
+	@Column(name="tel")
 	private String tel;
 
 	@ManyToOne
-	@JoinColumn(name="\"restoran\"")
+	@JoinColumn(name="restoran")
 	private Restoran restoranBean;
 
 	public Narudzba() {

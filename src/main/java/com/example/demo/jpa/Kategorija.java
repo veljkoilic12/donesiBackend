@@ -9,20 +9,20 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name="\"kategorija\"")
+@Table(name="kategorija")
 @NamedQuery(name="Kategorija.findAll", query="SELECT k FROM Kategorija k")
 public class Kategorija implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="\"id\"")
+	@Column(name="id")
 	private int id;
 
-	@Column(name="\"ime\"")
+	@Column(name="ime")
 	private String ime;
 
-	@Column(name="\"opis\"")
+	@Column(name="opis")
 	private String opis;
 
 	public Kategorija() {

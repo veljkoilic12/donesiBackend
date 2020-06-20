@@ -9,27 +9,27 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name="\"stavka\"")
+@Table(name="stavka")
 @NamedQuery(name="Stavka.findAll", query="SELECT s FROM Stavka s")
 public class Stavka implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="\"id\"")
+	@Column(name="id")
 	private int id;
 
-	@Column(name="\"kolicina\"")
+	@Column(name="kolicina")
 	private int kolicina;
 
 	//uni-directional many-to-one association to Jelo
 	@ManyToOne
-	@JoinColumn(name="\"jelo\"")
+	@JoinColumn(name="jelo")
 	private Jelo jeloBean;
 
 	//uni-directional many-to-one association to Narudzba
 	@ManyToOne
-	@JoinColumn(name="\"narudzba\"")
+	@JoinColumn(name="narudzba")
 	private Narudzba narudzbaBean;
 
 	public Stavka() {

@@ -10,33 +10,33 @@ import java.math.BigDecimal;
  * 
  */
 @Entity
-@Table(name="\"jelo\"")
+@Table(name="jelo")
 @NamedQuery(name="Jelo.findAll", query="SELECT j FROM Jelo j")
 public class Jelo implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="\"id\"")
+	@Column(name="id")
 	private int id;
 	
-	@Column(name="\"cijena\"")	
+	@Column(name="cijena")	
 	private BigDecimal cijena;
 	
-	@Column(name="\"ime\"")
+	@Column(name="ime")
 	private String ime;
 	
-	@Column(name="\"opis\"")	
+	@Column(name="opis")	
 	private String opis;
 	
-	@Column(name="\"sastav\"")	
+	@Column(name="sastav")	
 	private String sastav;
 	
 	@ManyToOne
-	@JoinColumn(name="\"kategorija\"")
+	@JoinColumn(name="kategorija")
 	private Kategorija kategorijaBean;
 	
 	@ManyToOne
-	@JoinColumn(name="\"restoran\"")	
+	@JoinColumn(name="restoran")	
 	private Restoran restoranBean;
 
 	public Jelo() {

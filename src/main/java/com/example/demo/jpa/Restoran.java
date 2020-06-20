@@ -9,34 +9,34 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name="\"restoran\"")
+@Table(name="restoran")
 @NamedQuery(name="Restoran.findAll", query="SELECT r FROM Restoran r")
 public class Restoran implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="\"id\"")
+	@Column(name="id")
 	private int id;
 
-	@Column(name="\"adresa\"")
+	@Column(name="adresa")
 	private String adresa;
 
-	@Column(name="\"email\"")
+	@Column(name="email")
 	private String email;
 
-	@Column(name="\"ime\"")
+	@Column(name="ime")
 	private String ime;
 
-	@Column(name="\"opis\"")
+	@Column(name="opis")
 	private String opis;
 
-	@Column(name="\"tel\"")
+	@Column(name="tel")
 	private String tel;
 
 	//uni-directional many-to-one association to User
 	@ManyToOne
-	@JoinColumn(name="\"usr\"")
+	@JoinColumn(name="usr")
 	private User usertbl;
 
 	public Restoran() {
