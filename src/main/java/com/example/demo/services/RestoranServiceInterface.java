@@ -9,4 +9,5 @@ public interface RestoranServiceInterface {
 	public boolean addRestoran(String token,Restoran resroan);
 	public boolean modifyRestoran(String token,Restoran restoran);
 	public boolean deleteRestoran(String token,Restoran restoran);
+	public Collection<Restoran> findRestoran(String term);
 }

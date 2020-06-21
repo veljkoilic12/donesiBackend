@@ -3,7 +3,6 @@ package com.example.demo.controlers;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,13 +34,17 @@ public class UserControler {
 	
 	@PutMapping("/user")
 	public ResponseEntity<User> modifyUser(@RequestHeader("Authorization") String token,@RequestBody User user){
-		userService.modifyUser(token,user);
-		return new ResponseEntity<User>(HttpStatus.OK);
+		if(userService.modifyUser(token,user))
+			return new ResponseEntity<User>(HttpStatus.OK);
+		else
+			return new ResponseEntity<User>(HttpStatus.FORBIDDEN);
 	}
 	
 	@DeleteMapping("/user")
 	public ResponseEntity<User> deleteUser(@RequestHeader("Authorization") String token,@RequestBody User user){
-		userService.deleteUser(token,user);
-		return new ResponseEntity<User>(HttpStatus.OK);
+		if(userService.deleteUser(token,user))
+			return new ResponseEntity<User>(HttpStatus.OK);
+		else
+			return new ResponseEntity<User>(HttpStatus.FORBIDDEN);
 	}
 }

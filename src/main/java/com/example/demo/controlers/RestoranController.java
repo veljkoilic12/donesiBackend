@@ -24,12 +24,17 @@ public class RestoranController {
 	
 	@GetMapping("/restoran")
 	public Collection<Restoran> getRestorani(){
-		return null;
+		return restoranService.getRestorani();
 	}
 	
 	@GetMapping("/restoran/{id}")
 	public Restoran getRestoran(@PathVariable int id) {
-		return null;
+		return restoranService.getRestoran(id);
+	}
+	
+	@GetMapping("/restoran/{term}")
+	public Collection<Restoran> findRestoran(@PathVariable String term){
+		return restoranService.findRestoran(term);
 	}
 	
 	@PostMapping("/restoran")
